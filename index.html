@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Life — Nomad Interview</title>
+  <meta name="description" content="Nomad Interview Issue No.5 — What Is Life. A journey across science, technology, and humanity." />
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --fg: #f4f4f6;
+      --muted: #a7a7b0;
+      --accent: #8fd3f4;
+      --card: #14141a;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 32px 20px; }
+    header {
+      position: relative;
+      display: grid;
+      gap: 24px;
+      padding: 120px 40px 120px;
+      border-radius: 24px;
+      overflow: hidden;
+      /* 이미지 위 그라데이션을 더 길게, 아래로 자연스럽게 페이드 */
+      background:
+        linear-gradient(
+          180deg,
+          rgba(11,11,13,0.15) 0%,
+          rgba(11,11,13,0.45) 45%,
+          rgba(11,11,13,0.85) 75%,
+          rgba(11,11,13,1) 100%
+        ),
+        url("Comet Ison.jpg") center / cover no-repeat;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(800px 300px at 15% 20%, rgba(143,211,244,.25), transparent 60%);
+      pointer-events: none;
+    }
+    .eyebrow { color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.05; margin: 0; }
+    .subtitle { font-size: 18px; color: var(--muted); max-width: 720px; }
+    .cta { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+    .btn { background: var(--fg); color: #0b0b0d; padding: 12px 18px; border-radius: 999px; font-weight: 600; }
+    .btn.secondary { background: transparent; color: var(--fg); border: 1px solid #2a2a33; }
+    .hero {
+      margin-top: 24px;
+      border-radius: 18px;
+      background: rgba(20,20,26,.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 32px;
+    }
+    section {
+      margin-top: 72px;
+      /* 헤더 아래 첫 섹션이 자연스럽게 이어지도록 위쪽 여백을 살짝 끌어올림 */
+      position: relative;
+    }
+    header + section {
+      margin-top: 40px;
+    }
+    h2 { font-size: 28px; margin: 0 0 12px; }
+    p { color: var(--muted); line-height: 1.7; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .card { grid-column: span 4; background: var(--card); border: 1px solid #1f1f29; border-radius: 18px; padding: 20px; }
+    .card h3 { margin: 0 0 8px; }
+    .card p { margin: 0; }
+    .quote {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    footer { margin-top: 96px; border-top: 1px solid #1f1f29; padding: 32px 0; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .card { grid-column: span 6; }
+    }
+    @media (max-width: 600px) {
+      .card { grid-column: span 12; }
+      .hero { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="eyebrow">Nomad Interview · Issue No.5</div>
+      <h1>What Is Life</h1>
+      <p class="subtitle">Life seeks hope. Every living being endures uncertainty and moves forward in search of it. This issue explores what life is—across science, technology, and humanity.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.paypal.com/invoice/p/#PZ3N28GE8WALPCB9" target="_blank" rel="noopener noreferrer">Purchase via PayPal</a>
+        <a class="btn secondary" href="https://buy.stripe.com/test_XXXXXXXXXX" target="_blank" rel="noopener noreferrer">Pay with Card (Stripe)</a>
+      </div>
+      <div class="hero">
+        <p class="quote"><span style="display:inline-block; margin-left:-0.4em;">“</span>Emotion, love, empathy, kindness. These are not concepts that exist at a fundamental level.<br>
+          These are concepts that emerge when you get to a scale of roughly one meter.<br>
+          But they’re not concepts that are there at 10<sup>-35</sup> meters—the fundamental length scale of the universe.<br><br>
+          And so, if you want to find something on which to rest the principles by which you live your life,<br>
+          I think fundamental physics is not the thing to look to—<br>
+          unless you just want to accept that the universe doesn’t care about you.<br><br>
+          That’s the lesson: the universe doesn’t care about humans. It does not care about our existence.<br>
+          The fact that we do exist is, for want of a better word, a miracle.<br>
+          And it’s clear that what’s happening here on Earth—because of our existence—is<br>
+          significantly more complex than anything else we’ve ever discovered in the universe.<br><br>
+          That makes it interesting. That also makes it precious. And we should care for it.”<br><br>
+          <span style="color: var(--fg); font-size: 16px;">David Tong</span><br>
+          <span style="color: var(--muted); font-size: 14px;">Professor of Theoretical Physics, Trinity College, Cambridge</span>
+        </p>
+      </div>
+    </header>
+
+    <section id="about">
+      <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAACAAAAAVUCAYAAABEb/gRAAAQAElEQVR4Aez9ebslS1beCb5rLXPfJ+KiUj39NbqfruoqqUszgyQk..." alt="Nomad Interview — What Is Life Issue Cover" style="width:100%; max-width:520px; display:block; margin:0 0 32px; border-radius:16px;" />
+      <h2>About This Issue</h2>
+      <p>
+        Life seeks hope.<br>
+        Every living being endures uncertainty and moves forward in search of it.<br><br>
+        Born from fear, this journey explores what life is—<br>
+        through the vertical axis of scientific and technological inquiry,<br>
+        spanning quantum physics, advanced technologies, and cosmology,<br>
+        and the horizontal axis of human reflection in philosophy, art, and religion.<br><br>
+        As these axes intersect,<br>
+        the meaning of life emerges,<br>
+        growing deeper and wider in our understanding.
+      </p>
+      <div class="interviews">
+        <p style="margin-top:24px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);">Interviewees</p>
+        <p style="font-size:13px; line-height:1.6;">
+          <strong>Jim Al‑Khalili</strong>, Professor of Theoretical Physics, University of Surrey &amp; BBC Science Communicator<br>
+          <strong>Scott Aaronson</strong>, Director, Quantum Information Center, University of Texas at Austin<br>
+          <strong>Sara Seager</strong>, Professor of Physics and Planetary Science, MIT; NASA Starshade Mission Leader<br>
+          <strong>David Tong</strong>, Professor of Theoretical Physics, Trinity College, Cambridge<br>
+          <strong>Jeremy O’Brien</strong>, Co‑founder &amp; CEO, PsiQuantum<br>
+          <strong>Pete Shadbolt</strong>, Co‑founder &amp; CSO, PsiQuantum<br>
+          <strong>Alexander Ling</strong>, Professor of Physics, National University of Singapore; Co‑founder, SpeQtral<br>
+          <strong>Henry Kim</strong>, Senior Manager (M&amp;P Engineering), Blue Origin; Founder, G1.ART<br>
+          <strong>Kim Ki‑hyun</strong>, Professor of Philosophy, Seoul National University<br>
+          <strong>Daegeon Andreas Lee Jun</strong>, Priest
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Inside</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Science</h3>
+          <p>
+            Fear led the question inward—toward the smallest scales of existence.<br>
+            From Schrödinger’s radical inquiry <em>What Is Life?</em> to contemporary quantum physics,
+            this section traces how uncertainty and entanglement may govern not only particles,
+            but life itself.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Technology</h3>
+          <p>
+            At the edge where theory becomes tool, quantum mechanics transforms into technology.<br>
+            From computation to communication, we explore how the properties of light and matter
+            give rise to machines that extend perception, intelligence, and possibility.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Humanity</h3>
+          <p>
+            Beyond equations and devices lies another axis: human reflection.<br>
+            Through conversations with philosophers, artists, and spiritual thinkers,
+            this section confronts fear, meaning, and connection—asking how we might walk
+            forward together in an entangled world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="purchase">
+      <h2>Get a Copy</h2>
+      <p>Available in select bookstores and online. International shipping supported.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.paypal.com/invoice/p/#PZ3N28GE8WALPCB9" target="_blank" rel="noopener noreferrer">Purchase</a>
+        <a class="btn secondary" href="https://www.instagram.com/heathnewsstandsf/" target="_blank" rel="noopener noreferrer">Stockists</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Nomad Interview</div>
+      <div>Issue No.5 · What Is Life</div>
+    </footer>
+  </div>
+</body>
+</html>
